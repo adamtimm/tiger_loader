@@ -1,4 +1,7 @@
-Simple CENTOS image with wget installed and ability to mount a volume
+Simple CENTOS image with wget installed and ability to mount a volume to download tiger data for loading into a geocoder
+
+
+**USE AT OWN RISK, THIS WILL DOWNLOAD A LOT OF DATA!!!**
 
 dockerfile contents
 
