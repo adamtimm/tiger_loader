@@ -1,12 +1,19 @@
 #new dockerfile
-FROM centos:7
+FROM        alpine
 
-RUN yum install -y wget && yum -y clean all
+MAINTAINER  Adam
+
+
+# install openssl and the complete wget
+RUN            apk --update add openssl wget \
+            \
+            # clean up cached artefacts
+            && rm -rf /var/cache/apk/*
 
 VOLUME ["/mnt"]
 
 USER 1001
 
 WORKDIR /tmp
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/bin/sh" ]
 CMD []
